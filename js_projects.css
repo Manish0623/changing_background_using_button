@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Make sure body takes up full viewport height */
+}
+
+h3 {
+  background-color: yellow;
+  color: red;
+  height: 35px;
+  width: 200px;
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  font-size: 20px;
+  border: 2px solid red;
+  border-radius: 4px;
+  margin: 0; /* Remove any margin to avoid alignment issues */
+  margin-top: 10%;
+}
+
+h3 p {
+  text-align: center;
+  margin-top: 3px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 40%;
+  margin-top: 2%;
+}
+
+/* Style for the span element */
+#green, #red, #blue, #yellow {
+  display: inline-block; 
+  width: 100px;
+  height: 100px;
+  border: 2px solid black; 
+  border-radius: 4px;
+}
+
+#green {
+  background-color: green; 
+}
+
+#red {
+  background-color: red; 
+}
+
+#blue {
+  background-color: blue; 
+}
+
+#yellow {
+  background-color: yellow; 
+}
+
+/* Media queries for responsiveness */
+
+/* Small devices (phones, less than 600px) */
+@media (max-width: 600px) {
+  h3 {
+      width: 150px;
+      font-size: 16px;
+  }
+
+  .box {
+      width: 80%;
+      flex-direction: column; /* Stack the buttons vertically */
+      align-items: center; /* Center buttons in smaller screens */
+  }
+
+  #green, #red, #blue, #yellow {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px; /* Add spacing between stacked buttons */
+  }
+}
+
+/* Medium devices (tablets, 600px to 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+  h3 {
+      width: 180px;
+      font-size: 18px;
+  }
+
+  .box {
+      width: 60%;
+      justify-content: space-between; /* More space between buttons */
+  }
+
+  #green, #red, #blue, #yellow {
+      width: 90px;
+      height: 90px;
+  }
+}
+
+/* Large devices (desktops, larger than 900px) */
+@media (min-width: 900px) {
+  h3 {
+      width: 220px;
+      font-size: 22px;
+  }
+
+  .box {
+      width: 40%;
+  }
+
+  #green, #red, #blue, #yellow {
+      width: 120px;
+      height: 120px;
+  }
+}
